@@ -1,0 +1,36 @@
+---
+title: "Write pages"
+description: "Add a page, link to it and place it in the sidebar."
+---
+
+## Add a page
+
+Create a `.mdx` file anywhere in the repository, such as `guides/install.mdx`. Open it with frontmatter: a block between two `---` lines that names the page.
+
+```yaml Frontmatter
+title: "Install the SDK"
+description: "Add the SDK to your project in one command."
+```
+
+Write the page in Markdown below the closing `---`.
+
+## Put it in the sidebar
+
+A page appears in the sidebar only after you list it in `docs.json`. Use its path without the extension:
+
+```json docs.json
+{
+  "navigation": {
+    "groups": [
+      {
+        "group": "Guides",
+        "pages": ["guides/install"]
+      }
+    ]
+  }
+}
+```
+
+## Link between pages
+
+Link with the page's path from the root, without the extension: [the quickstart](/quickstart). Links that start with `/` keep working when you move the linking page.

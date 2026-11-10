@@ -1,0 +1,56 @@
+---
+title: "Components"
+description: "Callouts, steps, tabs and code blocks you can use on any page."
+---
+
+Components are tags you write inside a page. This page uses each one so you can see how it renders.
+
+## Callouts
+
+<Note>Use a note for context the reader can skip.</Note>
+
+<Warning>Use a warning for a step that can lose data or break something.</Warning>
+
+```mdx
+<Note>Use a note for context the reader can skip.</Note>
+```
+
+## Tabs
+
+<Tabs>
+  <Tab title="macOS">
+    ```bash
+    brew install acme
+    ```
+  </Tab>
+  <Tab title="Linux">
+    ```bash
+    curl -fsSL https://example.com/install.sh | sh
+    ```
+  </Tab>
+</Tabs>
+
+## Code groups
+
+<CodeGroup>
+
+```javascript index.js
+const client = new Acme({ apiKey: process.env.ACME_API_KEY })
+```
+
+```python main.py
+client = Acme(api_key=os.environ["ACME_API_KEY"])
+```
+
+</CodeGroup>
+
+## Accordions
+
+<AccordionGroup>
+  <Accordion title="Can I use plain Markdown?">
+    Yes. Components are optional; headings, lists, tables and code blocks all work as plain Markdown.
+  </Accordion>
+  <Accordion title="Where are all the components listed?">
+    The [Margin component reference](https://margin.manicule.dev/docs/content/components) lists each one with its options.
+  </Accordion>
+</AccordionGroup>
